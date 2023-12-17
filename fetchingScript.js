@@ -17,9 +17,9 @@ function createMovieCard(movie) {
     const card = document.createElement("div");
     card.className = "card";
 
-    const image = document.createElement("img");
-    image.src = movie.image;
-    image.alt = movie.title;
+    // const image = document.createElement("img");
+    // image.src = movie.image;
+    // image.alt = movie.title;
 
     const title = document.createElement("h3");
     title.textContent = movie.title;
@@ -30,7 +30,7 @@ function createMovieCard(movie) {
     const releaseYear = document.createElement("p");
     releaseYear.textContent = `Release Year: ${movie.releaseYear}`;
 
-    card.appendChild(image);
+    // card.appendChild(image);
     card.appendChild(title);
     card.appendChild(genre);
     card.appendChild(releaseYear);

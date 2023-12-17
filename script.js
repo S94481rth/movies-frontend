@@ -14,9 +14,7 @@ function createMovieCard(movie) {
     const card = document.createElement("div");
     card.className = "card";
 
-    const image = document.createElement("img");
-    image.src = movie.image;
-    image.alt = movie.title;
+
 
     const title = document.createElement("h3");
     title.textContent = movie.title;
