@@ -37,3 +37,21 @@ body {
     font-size: 14px;
     margin: 5px 0;
 }
+.addMovies {
+    text-align: center;
+    margin: 20px;
+}
+
+.addMovies a {
+    display: inline-block;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #fff;
+    background-color: #007BFF;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.addMovies a:hover {
+    background-color: #0056b3;
+}
