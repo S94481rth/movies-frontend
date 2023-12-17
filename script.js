@@ -4,6 +4,7 @@ const movies = [
     { title: "Movie 1", genre: "Action", releaseYear: 2022, image: "movie1.jpg" },
     { title: "Movie 2", genre: "Drama", releaseYear: 2023, image: "movie2.jpg" },
     { title: "Movie 3", genre: "Romance", releaseYear: 2021, image: "movie3.jpg" },
+    { title: "Movie 4", genre: "Crime", releaseYear: 2022, image: "movie4.jpg" },
 
     // Add more movie data as needed
 ];
