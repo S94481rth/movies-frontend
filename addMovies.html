@@ -63,10 +63,13 @@
 
     <button type="button" onclick="submitForm()">Add Movie</button>
 </form>
+<div id="addedMovie">
 
+</div>
 <script>
     function submitForm() {
         // Get form data
+        const form = document.getElementById("addedMovie").value;
         const title = document.getElementById("title").value;
         const genre = document.getElementById("genre").value;
         const releaseYear = document.getElementById("releaseYear").value;
@@ -80,7 +83,7 @@
 
         // Send a POST request to the server (you need to implement this)
         // Example using fetch API:
-        fetch('http://localhost:3000/api/addMovie', {
+        fetch('https://my-movies-backend-service.onrender.com/api/addMovie', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -90,6 +93,9 @@
         .then(response => response.json())
         .then(data => {
             console.log('Success:', data);
+            const ele = document.createElement('p');
+            p.innerHTML = "Added Movie";
+            form.appendChild(ele);
             // Optionally, redirect or perform additional actions after successful submission
         })
         .catch((error) => {

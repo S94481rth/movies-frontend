@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 async function fetchMovies() {
     try {
-        const response = await fetch('http://localhost:3000/api/getMovies');
+        const response = await fetch('https://my-movies-backend-service.onrender.com/api/getMovies');
         const movies = await response.json();
 
         displayMovies(movies);
