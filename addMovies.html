@@ -69,11 +69,11 @@
 <script>
     function submitForm() {
         // Get form data
-        const form = document.getElementById("addedMovie").value;
+        const addedMovie = document.getElementById("addedMovie");
         const title = document.getElementById("title").value;
         const genre = document.getElementById("genre").value;
         const releaseYear = document.getElementById("releaseYear").value;
-
+        
         // Construct the movie object
         const movie = {
             title: title,
@@ -90,18 +90,22 @@
             },
             body: JSON.stringify(movie),
         })
-        .then(response => response.json())
-        .then(data => {
-            console.log('Success:', data);
-            const ele = document.createElement('p');
-            p.innerHTML = "Added Movie";
-            form.appendChild(ele);
-            // Optionally, redirect or perform additional actions after successful submission
-        })
-        .catch((error) => {
-            console.error('Error:', error);
-        });
+        // .then(() => {
+        //     console.log('Success:');
+        //     const ele = document.createElement('p');
+        //     ele.innerHTML = "Added Movie";
+        //     addedMovie.appendChild(ele);
+        //     // Optionally, redirect or perform additional actions after successful submission
+        // })
+        // .catch((error) => {
+        //     console.error('Error:', error);
+        // });
+        console.log('Success:');
+        const ele = document.createElement('p');
+        ele.innerHTML = "Added Movie";
+        addedMovie.appendChild(ele);
     }
+
 </script>
 
 </body>
