@@ -13,7 +13,10 @@ const movies = [
 function createMovieCard(movie) {
     const card = document.createElement("div");
     card.className = "card";
-
+    const htmlContent=`
+    <h3>${movie.title}</h3>
+     <button onclick="deletemovie()">Delete</button>
+    `
 
 
     const title = document.createElement("h3");
@@ -23,12 +26,16 @@ function createMovieCard(movie) {
     genre.textContent = `Genre: ${movie.genre}`;
 
     const releaseYear = document.createElement("p");
-    releaseYear.textContent = `Release Year: ${movie.releaseYear}`;
+    releaseYear.textContent = `Release Year: ${movie.releaseYear}`; 
+
+    const deleteButton = document.createElement("button");
+    deleteButton.innerHTML = `Delete Movie`;
 
     card.appendChild(image);
-    card.appendChild(title);
+    card.appendChild(htmlContent);
     card.appendChild(genre);
     card.appendChild(releaseYear);
+    card.appendChild(deleteButton);
 
     return card;
 }
@@ -36,7 +43,7 @@ function createMovieCard(movie) {
 // Function to display movie cards
 function displayMovies() {
     const container = document.getElementById("movieContainer");
-
+    container.appendChild()
     movies.forEach((movie) => {
         const card = createMovieCard(movie);
         container.appendChild(card);
