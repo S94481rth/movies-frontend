@@ -83,7 +83,7 @@
 
         // Send a POST request to the server (you need to implement this)
         // Example using fetch API:
-        fetch('https://my-movies-backend-service.onrender.com/api/addMovie', {
+        fetch('https://movie-crud-app-gbcf.onrender.com/api/addMovie', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -104,10 +104,10 @@
         // const ele = document.createElement('p');
         // ele.innerHTML = "Added Movie";
         // addedMovie.appendChild(ele);
+
+        window.location.href = "./index.html";  
         alert("Added Movie!");
-        document.getElementById('title').value="";
-        document.getElementById('genre').value="";
-        document.getElementById('releaseYear').value="";
+
 
     }
 

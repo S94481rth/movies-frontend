@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 async function fetchMovies() {
     try {
-        const response = await fetch('https://my-movies-backend-service.onrender.com/api/getMovies');
+        const response = await fetch('https://movie-crud-app-gbcf.onrender.com/api/getMovies');
         const movies = await response.json();
 
         displayMovies(movies);
@@ -14,7 +14,7 @@ async function fetchMovies() {
 }
 
 async function deleteMovie(movie){
-    fetch(`http://localhost:3000/api/deleteMovie/${movie}`, {
+    fetch(`https://movie-crud-app-gbcf.onrender.com/api/deleteMovie/${movie}`, {
         method: 'DELETE',
         headers: {
             'Content-type': 'application/json; charset=UTF-8' // Indicates the content 
