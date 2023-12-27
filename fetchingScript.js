@@ -50,19 +50,19 @@ function createMovieCard(movie) {
     title.textContent = movie.title;
 
     const genre = document.createElement("p");
-    genre.textContent = `Genre: ${movie.genre}`;
+    genre.textContent = `Location: ${movie.genre}`;
 
     const releaseYear = document.createElement("p");
-    releaseYear.textContent = `Release Year: ${movie.releaseYear}`;
+    releaseYear.textContent = `Ratings: ${movie.releaseYear}`;
 
     const deleteButton = document.createElement("button");
-    deleteButton.innerHTML = `Delete Movie`;
+    deleteButton.innerHTML = `Delete Review`;
     deleteButton.onclick = () =>{
         deleteMovie(title.textContent);
     }
     
     const editButton = document.createElement("button");
-    editButton.innerHTML = "Edit";
+    editButton.innerHTML = "Edit Review";
     editButton.onclick = () =>{
         editMovie(movie);
     }
